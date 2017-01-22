@@ -1,5 +1,6 @@
 ![alt text](https://github.com/minhanhn98/AwayWithHarassment/blob/master/Impact!.png "Impact! Logo")
 
+
 # Impact! API Documentation
 What is Impact! API? Impact was made during the 2017 Hack UCSC event  in an attempt to build an API that could be very cross-platform and be able to filter inappropriate languages and output a positive message as a way to deter cyber bullies. 
 
@@ -105,7 +106,25 @@ public void send(View v) {
     
 Note: One of the first thing that happens is making the message text field object and creating the button. Remember that this can not happen in the main thread and must be done on a different one in the Android app.
 
+#For a jQuery ajax POST to Impact!
+Just for the simple request is not going to be too much work, but generally you have this associated with an action, if you just want the jQuery post() method and an example of it with the Impact! url, simply use the following code: 
+```
+$.ajax({
+  type: "POST",
+  url:http://impact-156315.appspot.com/impact_script ,
+  data: String,
+  success: success,
+  dataType: json
+});
+```
 
 #Working with Google Cloud Platform
 The project used Python 3 for no other reason than the convenience of the developer, this proved to be quite a challenge as the Standard Environment for the Google App Engine only supported Python 2. So the decision was made to use the Flexable Environment. If you are unfamilar with the difference between the both of them, I suggest looking into the Google documentation. 
+
+
+#Possible Reasons for Failure
+
+In the case that you are receiving a 404, the server will not send back a 404, meaning there is something wrong with your application in the way you are sending it, or to where you are sending it to. If you copied in the url by hand please double check that it is correct. 
+
+The data type is also very important
 
