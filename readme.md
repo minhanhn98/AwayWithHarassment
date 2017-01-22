@@ -3,9 +3,9 @@
 #Table of Contents
 <br />[1.1 Impact! API Docuemtation](#11-impact-api-documentation)
 <br />[1.2 Getting Started With Impact!](#12-getting-started-with-impact)
-<br />[2.1.1 Building a WebPage that uses Impact! API](#211-building-a-webpage-that-uses-impact)
+<br />[2.1.1 Building a WebPage that uses Impact! API](#211-building-a-webpage-that-uses-impact-api)
 <br />[2.2.2 Sample code for submit entry](#222-sample-code-for-submit-entry)
-<br />[2.3.1 Building an Android App that uses Impact!](#231-building-an-android-app-that-uses-impact!)
+<br />[2.3.1 Building an Android App that uses Impact!](#231-building-an-android-app-that-uses-impact)
 <br />[2.3.2 Sample code for submit entry](#232-sample-code-for-submit-entry)
 <br />[3.1.1 For a jQuery ajax POST to Impact!](#311-for-a-jquery-ajax-post-to-impact)
 <br />[4.1.1 Working with Google Cloud Platform](#411-working-with-google-cloud-platform)
