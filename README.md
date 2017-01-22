@@ -105,3 +105,7 @@ public void send(View v) {
     
 Note: One of the first thing that happens is making the message text field object and creating the button. Remember that this can not happen in the main thread and must be done on a different one in the Android app.
 
+
+#Working with Google Cloud Platform
+The project used Python 3 for no other reason than the convenience of the developer, this proved to be quite a challenge as the Standard Environment for the Google App Engine only supported Python 2. So the decision was made to use the Flexable Environment. If you are unfamilar with the difference between the both of them, I suggest looking into the Google documentation. 
+
