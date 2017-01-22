@@ -1,7 +1,9 @@
 ![alt text](https://github.com/minhanhn98/AwayWithHarassment/blob/master/Impact!.png "Impact! Logo")
 
+#Table of Contents
+1.1 [Impact! API Docuemtation](#impact-api-documentation)
 
-# Impact! API Documentation
+#1.1 Impact! API Documentation
 What is Impact! API? Impact was made during the 2017 Hack UCSC event  in an attempt to build an API that could be very cross-platform and be able to filter inappropriate languages and output a positive message as a way to deter cyber bullies. 
 
 #Getting Started With Impact!
