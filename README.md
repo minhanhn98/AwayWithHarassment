@@ -117,7 +117,7 @@ $.ajax({
   dataType: json
 });
 ```
-
+But make sure that the value being sent is set to the name of "UserSub", if it is not, it may cause issues and will not return anything. You should get some kind of error stating that it is looking for another request.
 #Working with Google Cloud Platform
 The project used Python 3 for no other reason than the convenience of the developer, this proved to be quite a challenge as the Standard Environment for the Google App Engine only supported Python 2. So the decision was made to use the Flexable Environment. If you are unfamilar with the difference between the both of them, I suggest looking into the Google documentation. 
 
@@ -126,5 +126,18 @@ The project used Python 3 for no other reason than the convenience of the develo
 
 In the case that you are receiving a 404, the server will not send back a 404, meaning there is something wrong with your application in the way you are sending it, or to where you are sending it to. If you copied in the url by hand please double check that it is correct. 
 
-The data type is also very important
+The data type is also very important, make sure it is always being sent as an http POST and the data being sent is form-data. 
 
+A sanity check would be to test the api. An easy way to do this is to install the Chrome Extension [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), opening Postman, and doing the following:
+Setting the method to POST
+The URL to http://impact-156315.appspot.com/impact_script 
+Clicking on Body then form-data 
+Setting key to UserSub
+Setting the value to your favorite curse word
+Pressing Send
+
+Finally... awaiting for a response. 
+
+####If you receive back a curseword, congratulations! You found a bug in our program and should report it to us immediately so that we may update our dictionary as we are always looking to improve our API! E-mail us or contact us directly through our [Devpost](https://devpost.com/software/end-cyber-bullying). 
+
+If you receive a word that is not a curse word, congratulations! You successfully communicated with the API! 
