@@ -2,14 +2,14 @@
 
 #Table of Contents
 <br />[1.1 Impact! API Docuemtation](#11-impact-api-documentation)
-<br />[1.2 Getting Started With Impact!](#12-Getting-Started-With-Impact)
-<br />[2.1.1 Building a WebPage that uses Impact! API](#211-Building-a-WebPage-that-uses-Impact!)
-<br />[2.2.2 Sample code for submit entry](#222-Sample-code-for-submit-entry)
-<br />[2.3.1 Building an Android App that uses Impact!](#231-Building-an-Android-App-that-uses-Impact!)
-<br />[2.3.2 Sample code for submit entry](#232-Sample-code-for-submit-entry)
-<br />[3.1.1 For a jQuery ajax POST to Impact!](#311-For-a-jQuery-ajax-POST-to-Impact!)
-<br />[4.1.1 Working with Google Cloud Platform](#411-Working-with-Google-Cloud-Platform)
-<br />[5.1 Debugging: Possible Reasons for Failure](#51-Debugging-Possible-Reasons-for-Failure)
+<br />[1.2 Getting Started With Impact!](#12-getting-started-with-impact)
+<br />[2.1.1 Building a WebPage that uses Impact! API](#211-building-a-webpage-that-uses-impact)
+<br />[2.2.2 Sample code for submit entry](#222-sample-code-for-submit-entry)
+<br />[2.3.1 Building an Android App that uses Impact!](#231-building-an-android-app-that-uses-impact!)
+<br />[2.3.2 Sample code for submit entry](#232-sample-code-for-submit-entry)
+<br />[3.1.1 For a jQuery ajax POST to Impact!](#311-for-a-jquery-ajax-post-to-impact)
+<br />[4.1.1 Working with Google Cloud Platform](#411-working-with-google-cloud-platform)
+<br />[5.1 Debugging: Possible Reasons for Failure](#51-debugging-possible-reasons-for-failure)
 <br />
 #1.1 Impact! API Documentation
 What is Impact! API? Impact was made during the 2017 Hack UCSC event  in an attempt to build an API that could be very cross-platform and be able to filter inappropriate languages and output a positive message as a way to deter cyber bullies. 
