@@ -1,3 +1,5 @@
+![alt text](https://github.com/minhanhn98/AwayWithHarassment/blob/master/Impact!.png "Impact! Logo")
+
 # Impact! API Documentation
 What is Impact! API? Impact was made during the 2017 Hack UCSC event  in an attempt to build an API that could be very cross-platform and be able to filter inappropriate languages and output a positive message as a way to deter cyber bullies. 
 
@@ -10,8 +12,9 @@ Building a webpage that uses the Impact! API is as simple as having a text area 
 
 Note: Your webpage will want to be able to hand the .json file it will receive back or else you will end up with lots of files in your download list when testing out the code.
 
-Sample code for submit entry:
+###Sample code for submit entry:
 
+```html
 <html>
 <head>
 <style> 
@@ -37,3 +40,68 @@ textarea {
 
 </body>
 </html>
+```
+
+Take particular note at the url in the form tag with the method "Post". This url is where you will always be sending your form. You are going to want to handle the response using javascript or something like JQUERY. 
+
+#Building an Android App that uses Impact! 
+
+Now whenever you are working with Android applications there are certain things you are going to watch out for. A common mistake is running certain methods in the main activity. This will result in an error and your app may not run at all. But similar with a webpage, the main idea is having a text area form, and a button in order to submit the http POST request. Also, you are going to want to be making sure that you are sending the right format.
+
+###Sample code for submit entry:
+```
+EditText msgText;
+Button sendButton;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.form);
+    
+    msgTextField = (EditText) findViewById(R.id.msgTextField)
+    sendButton = (Button) findViewById(R.id.sendButton);
+}
+
+public void send(View v) {
+    String msg = msgTextField.getText().toString();
+    if (!msg.isEmpty()) {
+        new PostData().execute(msg);
+    } else {
+        Toast.makeText(getBaseContext(), "Submit...", Toast.LENGTH_SHORT).show();
+    }
+}
+
+    public class PostData extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                HttpClient httpclient = new DefaultHttpClient();
+                HttpPost httppost = new HttpPost("http://impact-156315.appspot.com/impact_script");
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+                nameValuePairs.add(new BasicNameValuePair("id", "01"));
+                nameValuePairs.add(new BasicNameValuePair("message", params[0]));
+                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+                try {
+                    HttpResponse response = httpclient.execute(httppost);
+                    String op = EntityUtils.toString(response.getEntity(), "json");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            msgTextField.setText("");
+            Toast.makeText(getBaseContext(), "Sent", Toast.LENGTH_SHORT).show();
+        }
+    }
+ ```
+    
+Note: One of the first thing that happens is making the message text field object and creating the button. Remember that this can not happen in the main thread and must be done on a different one in the Android app.
+
