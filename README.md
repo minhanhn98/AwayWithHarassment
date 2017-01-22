@@ -1,21 +1,26 @@
 ![alt text](https://github.com/minhanhn98/AwayWithHarassment/blob/master/Impact!.png "Impact! Logo")
 
 #Table of Contents
-1.1 [Impact! API Docuemtation](#11-impact-api-documentation)
+[1.1 Impact! API Docuemtation](#11-impact-api-documentation)
+[1.2 Getting Started With Impact!](#12-Getting-Started-With-Impact)
+[2.1.1 Building a WebPage that uses Impact! API](#211-Building-a-WebPage-that-uses-Impact!)
+[2.2.2 Sample code for submit entry](#222-Sample-code-for-submit-entry)
+[2.3.1 Building an Android App that uses Impact!](#231-Building-an-Android-App-that-uses-Impact!)
+[2.3.2 Sample code for submit entry](#232-Sample-code-for-submit-entry)
 
 #1.1 Impact! API Documentation
 What is Impact! API? Impact was made during the 2017 Hack UCSC event  in an attempt to build an API that could be very cross-platform and be able to filter inappropriate languages and output a positive message as a way to deter cyber bullies. 
 
-#Getting Started With Impact!
+##1.2 Getting Started With Impact!
 
 Impact is actually fairly simple to implement and will start by showing how to implement it as a stand alone html form file. From there it is up to the user to find different ways to use the API. 
 
-#Building a WebPage that uses Impact! API
+#2.1.1 Building a WebPage that uses Impact! API
 Building a webpage that uses the Impact! API is as simple as having a text area somewhere on your webpage and having that submit via http POST. The following is one of the easiest examples and ways to send the http POST.
 
 Note: Your webpage will want to be able to hand the .json file it will receive back or else you will end up with lots of files in your download list when testing out the code.
 
-###Sample code for submit entry:
+###2.2.2 Sample code for submit entry:
 
 ```html
 <html>
@@ -47,11 +52,11 @@ textarea {
 
 Take particular note at the url in the form tag with the method "Post". This url is where you will always be sending your form. You are going to want to handle the response using javascript or something like JQUERY. 
 
-#Building an Android App that uses Impact! 
+##2.3.1 Building an Android App that uses Impact! 
 
 Now whenever you are working with Android applications there are certain things you are going to watch out for. A common mistake is running certain methods in the main activity. This will result in an error and your app may not run at all. But similar with a webpage, the main idea is having a text area form, and a button in order to submit the http POST request. Also, you are going to want to be making sure that you are sending the right format.
 
-###Sample code for submit entry:
+###2.3.2 Sample code for submit entry:
 ```
 EditText msgText;
 Button sendButton;
